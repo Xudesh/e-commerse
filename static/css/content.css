@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.content-food{
+    padding: 60px 6%;
+
+}
+
+
+.food-cards{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.card{
+    width: 320px;
+    border-radius: 8px;
+    background-color: #FAFAFA;
+    height: 405px;
+}
+
+.card-image img{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    width: 100%;
+    height: 300px;
+}
+
+
+.card .card-name{
+    text-align: left;
+    padding: 20px 25px;
+}
+
+.price-and-buy{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    font-size: 15px;
+}
+
+.buy-content a{
+    padding: 5px 10px;
+    background: #EA7C69;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+.card:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.card-name h3{
+    font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .content-food{
+        padding: 60px 4%;
+    }
+}
+
+
+@media screen and (max-width: 830px){
+    .food-cards .card{
+        width: 300px;
+        height: 395px;
+    }
+
+    .card .card-name{
+        padding: 13px 25px;
+    }
+}
+
+
+@media screen and (max-width: 701px) {
+    .food-cards .card{
+        width: 250px;
+        height: 345px;
+    }
+
+    .card-image img{
+        height: 250px;
+    }
+
+    .card-name h3{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 587px){
+    .food-cards .card{
+        width: 300px;
+        height: 395px;
+    }
+
+    .card-image img{
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 442px){
+    .food-cards .card{
+        width: 260px;
+        height: 350px;
+    }
+
+    .card-image img{
+        height: 260px;
+    }
+}

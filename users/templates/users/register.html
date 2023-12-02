@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="content-form">
+        <form method="POST" novalidate>
+
+            <h2>Зарегистрироваться</h2>
+
+            {% csrf_token %}
+
+            {% for field in form %}
+            <p>
+                {% if field.errors %}
+                <ul class="errorlist">
+                    {% for error in field.errors %}
+                        <li>
+                            {{ error }}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                
+                <div class="form-inputes">
+                    {{ field }}
+                </div>
+            </p>
+            {% endfor %}
+
+            <button class="btn" type="submit">Регистрация</button>
+            <a class="loginitem" href="{% url 'login' %}">Есть аккаунт ?</a>
+        </form>
+    </div>
+</body>
+</html>

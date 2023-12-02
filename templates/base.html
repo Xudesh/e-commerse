@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/content.css' %}">
+    <link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}">CLOD <span>Mane</span></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Меню</a>
+                </li>
+
+                <li>
+                    <a class="about-us" href="#">О нас</a>
+                </li>
+
+                <li>
+                    <a class="delivery" href="{% url 'delivery' %}">Доставка</a>
+                </li>
+
+                {% if request.user.is_authenticated %}
+                    <li class="form-link">
+                        <a class="btn btn-logout" href="{% url 'logout' %}">Выйти</a>
+                    </li>
+                {% else %}
+                <li class="form-link">
+                    <a class="btn btn-signup" href="{% url 'register' %}">Зарегистрироваться</a>
+                </li>
+
+                <li class="form-link">
+                    <a class="btn btn-login" href="{% url 'login' %}">Войти</a>
+                </li>
+
+                {% endif %}
+
+                <li class="menu-list">        
+                    <ion-icon name="menu-outline"></ion-icon>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="menu-head">
+        <div class="head-menu-title">
+            <h1>Меню</h1>
+        </div>
+
+        <div class="head-menu-categories">
+            <ul class="category">
+                <li>
+                    <a href="{% url 'fast_foods' %}">Фаст Фуды</a>
+                </li>
+
+                <div class="border"></div>
+
+                <li>
+                    <a href="{% url 'cocktails' %}">Коктейли</a>
+                </li>
+
+                <div class="border"></div>
+
+                <li>
+                    <a href="#">Японская кухня</a>
+                </li>
+
+                <div class="border"></div>
+
+                <li>
+                    <a href="#">Французкая кухня</a>
+                </li>
+
+                <div class="border"></div>
+
+                <li>
+                    <a href="#">Для детей</a>
+                </li>
+
+                <div class="border"></div>
+
+                <li>
+                    <a href="#">Дeсерты</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    {% block content %}
+    {% endblock %}
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

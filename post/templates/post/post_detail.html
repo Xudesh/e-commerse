@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{ post.name }}
+{% endblock %}
+
+
+{% block content %}
+    <div class="post-detail-content">
+        <div class="post-detail-image">
+            <img src="{{ post.image.url }}" alt="">
+        </div>
+
+        <div class="post-detail-text">
+            <h2>{{ post.name }}</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br/> Accusantium quas aut eaque eligendi. Lorem ipsum dolor sit <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Re-<br/>pellat eveniet eius amet rem magni corporis laborum.
+            </p>
+            <div class="order">
+                <p>${{ post.price }}</p>
+                <a href="#">Заказать</a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

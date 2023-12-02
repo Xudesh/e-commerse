@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Главная
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="content-food">
+        <div class="food-cards">
+            {% for post in posts %}
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ post.image.url }}" alt="">
+                    </div>
+                    <div class="card-name">
+                        <h3><a href="{{ post.get_absolute_url }}">{{ post.name }}</a></h3>
+                    </div>
+
+                    <div class="price-and-buy">
+                        <div class="price-content">
+                            <p>{{ post.date_added |time:"H:i" }}</p>
+                        </div>
+
+                        <div class="buy-content">
+                            <a href="{{ post.get_absolute_url }}">Хочу</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

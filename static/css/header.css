@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #121617;
+}
+
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 6%;
+    align-items: center;
+    background-color: #121617;
+    border-bottom: 1px solid beige;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.logo a{
+    text-decoration: none;
+    color: #FAFAFA;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.logo a span{
+    margin-left: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    color: cyan;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu ul li a{
+    color: #FAFAFA;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+
+.head-menu-categories ul{
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+
+.head-menu-categories ul li a{
+    color: #444;
+    text-decoration: none;
+}
+
+
+.head-menu-categories .border{
+    border-right: 2px solid #121617;
+}
+
+
+.menu-head{
+    padding: 40px 6%;
+}
+
+.menu-head h1{
+    color: #FAFAFA;
+    padding-left: 20px;
+    font-size: 34px;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+}
+
+.head-menu-title{
+    border-left: 4px solid cyan;
+}
+
+
+.head-menu-categories{
+    background: #e74c4c;
+    padding: 20px 30px;
+    overflow-x: auto;
+    border-radius: 1px;
+}
+
+
+.btn{
+    padding: 12px 14px;
+    background-color: #000;
+    border-radius: 8px;
+
+}
+
+.btn-login{
+    background-color: #8512ff;
+}
+
+.btn-signup{
+    background: #e74c4c;
+}
+
+
+
+ion-icon{
+    font-size: 30px;
+    color: #FAFAFA;
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    header{
+        padding: 40px 4%;
+    }
+    .menu-head{
+        padding: 40px 4%;
+    }
+}
+
+
+@media screen and (max-width: 830px){
+    header .menu .form-link{
+        display: none;
+    }
+
+    .menu ul ion-icon{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 568px) {
+    header .menu .delivery{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 442px){
+
+    header .logo a{
+        font-size: 18px;
+    }
+
+    header .menu a{
+        display: none;
+    }
+
+    .head-menu-title h1{
+        font-size: 28px;
+    }
+
+    .head-menu-categories .category a{
+        font-size: 14px;
+    }
+}

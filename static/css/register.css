@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+}
+
+.content-form{
+    top: 45%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+    background: #393646;
+    position: absolute;
+    color: white;
+    padding: 45px 2%; 
+    border-radius: 10px;
+}
+
+form{
+    text-align: center;
+}
+
+
+.form-inputes input{
+    padding: 14px 16px;
+    width: 300px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 0.5px solid #393646;
+    font-size: 16px;
+
+    
+}
+
+.btn{
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    background: cyan;
+    border: 1px solid cyan;
+    color: #3e3c3c;
+}
+
+
+form h2{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -15px;
+
+}
+
+
+a.loginitem{
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 592px){
+    .content-form{
+        width: 300px;
+    }
+
+    .form-inputes input{
+        width: 240px;
+    }
+}
+
+
+@media screen and (max-width: 315px) {
+    .content-form{
+        width: 270px;
+    }
+
+    .form-inputes input{
+        width: 230px;
+    }
+
+    form h2{
+        font-size: 20px;
+    }
+}
